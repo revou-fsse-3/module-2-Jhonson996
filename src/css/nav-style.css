@@ -1,0 +1,74 @@
+/* Navigasi */
+header {
+    z-index: 1;
+    width: 20rem; 
+    height: 100%;
+    background-color: rgba(241,195,195, .8);
+    position: fixed;
+    top: 0;
+    left: -20rem; 
+    transition: left 0.3s;
+}   
+
+nav {
+    margin-top: 10vh;
+    width: 100%;
+}
+
+nav p{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}   
+
+nav ul {
+    padding: 0;
+}
+
+nav ul li {
+    padding: 1rem  1.8rem;
+    margin: 0;
+    list-style-position: inside;
+    list-style-image: url(../../assets/icon/chevron-right.png);
+}
+
+nav ul li a {
+    height: 100%;
+    color: black;
+    text-decoration: none;
+    font-size: 1.7rem;
+}
+
+nav ul li:hover{
+    text-shadow: 2px 2px 4px grey;
+    background-color: rgba(232,75,108, .3);
+    border-right-style: solid;
+    border-width: 4px;
+}
+
+nav ul li a:hover {
+    font-weight: 700;
+}
+
+#btn-nav {
+    width: 90px;
+    margin: 10px 0 0 10px;
+    padding: 10px;
+    display: flex;
+    color: black;
+    font-weight: 800;
+    background-color: rgba(255,255,255,.5);
+    border-radius: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#btn-nav img{
+    margin: 0 5px;
+}

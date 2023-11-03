@@ -1,0 +1,347 @@
+
+@import url(nav-style.css);
+@import url(dekstop-style.css) only screen and (min-width: 961px);
+@import url(mobile-style.css) only screen and (max-width: 960px);
+
+@font-face {
+    font-family: 'Font-montserrat';
+    src: 
+    url(../../assets/font/Montserrat-VariableFont_wght.ttf),
+    url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXo.woff2) format('woff2');
+    font-display: swap;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Font-montserrat', sans-serif;
+    font-weight: 400;
+    scroll-behavior: smooth;
+}
+
+audio{
+    display: none;
+}
+
+body{
+    background-image: linear-gradient(to bottom,
+    rgba(255,220,218, 1), 
+    rgba(0,0,0, .1), 
+    rgba(241,195,195,.8),
+    rgba(255,220,218, 1), 
+    rgba(0,0,0, .1), 
+    rgba(241,195,195,.8)
+    );
+}
+
+/* img left side */
+    aside img{
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(90%);
+    }
+
+/*Right side*/
+    .content{
+        display: grid;
+    }
+
+/* tiap tab View height 100% */
+    .bride, .bride-quote, .maps{
+        max-width: 100%;
+        height: 100vh;
+        padding: 0 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+/* Sub title ukuran */
+    .sub-title{
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        text-decoration: underline;
+    }
+
+/* Background image top and bottom */
+    .content{
+        background-image: url("../../assets/002-min.webp") ;
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: 15vw;
+    }
+
+    .bride{
+        background-image: url("../../assets/001-min.webp") ;
+        background-repeat: no-repeat;
+        background-position: bottom  right;
+    }
+
+/* class bride */
+    .nama{
+        margin: 20px;
+    }
+
+    .nama p{
+        font-size: 3.5rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    
+    @keyframes love-color {
+        0% {color: rgb(182, 22, 54);}
+        25%   {color: rgb(232,75,108);}
+        50%  {color: rgb(237, 111, 137);}
+        100% {color: rgb(182, 22, 54);}
+      }
+
+    .nama #icon-love{
+        animation-name: love-color;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+    .date p{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .date #icon-down{
+        font-size: 3rem; 
+        text-shadow: 3px 3px 5px grey;
+    }
+
+/* Bride Quote */
+    .bride-quote p {
+        text-align: center;
+        font-size: 1.7rem;   
+        align-items: center;
+        justify-content: center;
+        font-style: italic ;
+        line-height: 3.5rem;
+    }
+
+    .bride-quote img{
+        width: 60%;
+        padding: 20px;
+    }
+
+/* Collection */
+    .collection{
+        max-width: 100%;
+        max-height: 100%;
+        padding: 20px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .collection p{
+        display: block;
+    }
+
+    .flex-container{
+        width: 100%;
+        display: flex;
+    }
+
+    .foto{
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-height: 100%;
+    }
+
+    .foto img{
+        width: 80%;
+        height: auto;
+        margin-bottom: 10px;   
+        border: 2px solid #000;
+        border-radius: 6%;
+        box-shadow: 2px 2px 10px rgb(79, 79, 79);
+        transition: transform .2s;
+    }
+
+    .foto img:hover{
+        transform: scale(1.2);
+    }
+
+/* Iframe Maps */
+    .maps p:nth-last-child(1){
+        margin-top: 2rem;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .frame{
+        border: 0;
+        box-shadow: 4px 4px 15px rgb(79, 79, 79) ;
+    }
+
+    #map-container {
+        position: relative;
+        width:90%;
+        height:50%;
+      }
+
+    #map-placeholder {
+        width: 90%;
+        height: 40%;
+        background-color: rgba(0, 0, 0, .3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+
+
+/* Form Attendance */
+    .formm{
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 3rem 0;
+    }
+
+    form{
+        padding: 15px;
+        width: 80%;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.6);
+        box-shadow: 4px 4px 15px rgb(79, 79, 79);
+    }
+
+    form p{
+        margin-bottom: 10px;
+    }
+    label {
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+    
+    input[type="text"],
+    input[type="radio"],
+    input[type="date"] {
+        width: 95%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 16px;
+    }
+
+    input[type="radio"] {
+        width: auto;
+        margin-right: 5px;
+    }
+
+    textarea {
+        resize: none;
+        width: 95%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 16px;
+    }
+
+    button {
+        background-color: rgb(255,209,209);
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 3px;
+        font-size: 1.1rem;
+    }
+
+    button:hover{
+        box-shadow: 2px 2px 7px black;
+    }
+
+/* list attendance */
+    .list-attendance{
+		display: none;
+        margin-top: 30px;
+        max-width: 80%;
+		flex-direction: column;
+        padding: 15px;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.6);
+        box-shadow: 4px 4px 15px rgb(79, 79, 79);
+    }
+
+    #attendance-list {
+		max-width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        display: flex;
+        margin-top: 1rem;
+        flex-direction: row;
+		flex-wrap: wrap;
+        /* justify-content: space-around; */
+    }
+
+    .list-attend{
+		display: flex;
+		flex-direction: column;
+		box-sizing: border-box;
+		padding: 10px;
+		background-color :rgba(255,220,218,1);
+		border-radius: 10px;
+        height: auto;
+        /* overflow: scroll; */
+	}
+
+    
+    .list-attend p{
+        margin: 2px 0;
+        text-align: center;
+        font-weight: 600;
+        font-style: italic;
+        border-bottom-style: solid;
+        border-color: grey;
+    }
+
+	.name-attend{
+		font-weight: 900;
+        border-bottom-style: solid;
+        border-color: grey;
+	}
+	
+	.wishes-attend{
+        font-style: italic;
+        overflow-wrap: break-word;
+        /* word-wrap: break-word; */
+	}
+
+/* Footer */
+    footer{
+        display: flex;
+        height: auto;
+        background-color: rgba(241,195,195);
+    }
+
+    footer section{
+        background-color: rgba(255,255,255,.5);
+        box-sizing: border-box;
+        padding:  2rem;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+
+    footer p{
+        margin-bottom: .5rem;
+    }
+

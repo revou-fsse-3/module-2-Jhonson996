@@ -1,0 +1,98 @@
+*{
+font-size: 14px;
+}
+
+body{
+display: flex;
+flex-direction: column;
+}
+
+/* Grid to Flex */
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+/* nav */
+nav ul li {
+    font-size: 2rem;
+    padding: 0.2rem;
+    margin-left: 1rem;
+}
+
+#btn-nav{
+    width: 50px;
+}
+
+#btn-nav span{
+    display: none;
+}
+
+/* side left */
+aside{
+    display: flex;
+    min-width : 100%;
+    margin: auto;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 5%, rgba(241,195,195,1));
+}
+
+aside picture{
+    z-index: -1;
+    width: 100%;
+}
+
+
+/* general */
+.sub-title{
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+/* width and height */
+.content{
+    width : 100%;
+    background-size: 20vw;
+}
+
+.bride{
+    background-size: 25vh;
+}
+
+.maps{
+    height: 60vh;
+}
+
+/* list attendance */
+.list-attend{
+margin-top: 5px;
+max-width: 100% ;
+}
+
+/* footer */
+footer{
+    box-sizing: border-box;
+    padding: 0;
+    height: 30vh;
+}
+
+footer section{
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer img{
+    width: 70%;
+    margin: .5rem 0;
+}
+
+footer p{
+    font-size: 3vw;
+}

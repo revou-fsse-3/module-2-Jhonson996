@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Wedding Invitation">
+        <link rel="stylesheet" href="./src/css/styles.css">
+        
+        <title>Wedding Invitation</title>
+    </head>
+
+    <body>
+        <header>
+            <button id="btn-nav">
+                    <img src="./assets/icon/nav-icon.png" alt="icon Navbar" width="20vw">
+                    <span>Menu</span>
+            </button>
+            <nav>
+                <p>Ed Sheer &#10084; Keith</p>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#couple">Story</a></li>
+                    <li><a href="#image">Image</a></li>
+                    <li><a href="#Location">Location</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <audio controls loop autoplay>
+            <source src="./assets/music/audio.mpeg" type="audio/mpeg">
+        </audio>
+
+        <aside class="imgleft">
+            <picture>
+                <source media="(min-width:461px)" srcset="assets/slideshow/00.avif">
+                <source media="(min-width:460px)" srcset="assets/slideshow/00-460.avif">
+                <img src="assets/slideshow/00.avif" alt="gambar prewed sisi kiri">
+              </picture>
+        </aside>    
+
+        <main>
+            <div class="content" id="home">
+                <div class="bride">
+                    <section class="nama">
+                        <p>Ed Sheer</p>
+                        <p id="icon-love">&#10084;</p>
+                        <p>Keith</p>
+                    </section>
+                    <section class="date">
+                        <p>Saturday,</p>
+                        <p>December 21, 2024</p>
+                        <p style="margin-top: 20px;">Maldives</p>
+                        <p id="icon-down">&#11167;</p>
+                    </section>
+                </div>
+
+                <div id="couple" class="bride-quote">
+                    <img src="assets/Image/line-01.png" alt="Hiasan background">
+                    <p>"Two lives, two hearts, joined together in friendship, united forever in love. You're cordially invited to the wedding of Ed Sheer and Keith.</p>
+                    <img src="assets/Image/line-01.png" alt="Hiasan background">
+                </div>
+                
+                <div class="collection">
+                    <p class="sub-title">Collection</p>
+                    <div id="image" class="flex-container">
+                        <div class="foto">
+                            <img src="assets/Image/image-01.avif" alt="gambar prewed">
+                            <img src="assets/Image/image-02.avif" alt="gambar prewed">
+                            <img src="assets/Image/image-03.avif" alt="gambar prewed">
+                        </div>
+                        <div class="foto">
+                            <img src="assets/Image/image-04.avif" alt="gambar prewed">
+                            <img src="assets/Image/image-05.avif" alt="gambar prewed">
+                            <img src="assets/Image/image-06.avif" alt="gambar prewed">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Location" class="maps">
+                    <p class="sub-title">Location</p>
+                    <div id="map-placeholder">
+                        <!-- Tampilan sementara untuk iframe -->
+                        <p>Loading map...</p>
+                    </div>
+                    <iframe 
+                        id="google-map"
+                        class="frame"
+                        title="Maps Lokasi"
+                        width="90%"
+                        height="50%" 
+                        allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <p>Maldives</p>
+                </div>
+
+                <div class="formm">
+                    <p class="sub-title">Attendance Form</p>
+                    <form id="attendance-form">
+
+                        <label for="full_name">Full Name:</label>
+                        <input type="text" id="full_name" name="full_name"  required>
+                        
+                        <p>Will you attend the wedding?</p>
+
+                        <input type="radio" id="yes" name="attendance" value="yes" required>
+                        <label for="yes">Yes</label>
+
+                        <input type="radio" id="no" name="attendance" value="no" style="margin-left: 20px" required>
+                        <label for="no">No</label><br><br>
+                        
+                        <!-- sementara blum tau -->
+                        <label for="date">Date submit :</label>
+                        <input type="date" id="date" name="date" required>
+
+                        <label for="wishes">Wishes for the Bride:</label>
+                        <textarea id="wishes" name="wishes" rows="4" maxlength="120" required></textarea>
+
+                        <div class="btnsubmit" style="text-align: right;">
+                            <button type="submit" onclick="submitForm()">Submit</button>
+                        </div>
+                    </form>
+
+                    <div class="list-attendance" id="list">
+                        <h2 style="text-align: center;">Wishes</h2>
+                        <section id="attendance-list">
+                            <!-- list div dari javascript-->
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <section>
+                <p>Thank You</p>
+                <img src="./assets/icon/brides-name.png" alt="Groom and bride name">
+                <p>The Big Family of</p>
+                <p>Lord Montague & Lady Montague</p>
+                <p>Lord Capulet & Lady Capulet</p>
+            </section>
+        </footer>
+
+        <script src="./src/js/js.js"></script>
+    </body> 
+</html>
