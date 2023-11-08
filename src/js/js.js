@@ -36,9 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	};
   });
 
-
-
-// Submit form
+// Submit-form
 function submitForm() {
     // Mendapatkan nilai dari inputan
 		var fullName = document.getElementById("full_name").value;
@@ -91,4 +89,25 @@ function submitForm() {
 	
   }
 
+// modal
+var modal = document.getElementById("modalImg");
+var btn = document.getElementById("BtnImg");
+var span = document.getElementsByClassName("close")[0];
 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+function myFunction() {
+	var element = document.body;
+	element.classList.toggle("dark-mode");
+}

@@ -19,6 +19,43 @@
     scroll-behavior: smooth;
 }
 
+.dark-mode{
+    background-image: none;
+    background-image: linear-gradient(to bottom,
+    rgba(0,0,0, .8), 
+    rgba(0,0,0, .5), 
+    rgba(0,0,0,.8),
+    rgba(0,0,0, 1), 
+    rgba(0,0,0, .5), 
+    rgba(0,0,0,.8),
+    rgba(0,0,0, 1)
+    );
+}
+
+/* .dark-mode .bride{
+    background-color: rgba(0, 0, 0, .2);
+} */
+
+.dark-mode header{
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.dark-mode, .dark-mode header,.dark-mode nav li a{
+    color: white;
+}
+
+.dark-mode footer{
+    background-color: rgba(255, 255, 255, .7);
+    color: black;
+}
+.dark-mode aside{
+    filter: brightness(50%);
+}
+
+.dark-mode button{
+    background-color: rgba(255, 255, 255, 1);
+}
+
 audio{
     display: none;
 }
@@ -72,7 +109,6 @@ body{
         background-image: url("../../assets/002-min.webp") ;
         background-repeat: no-repeat;
         background-position: top left;
-        background-size: 15vw;
     }
 
     .bride{
@@ -145,32 +181,51 @@ body{
     }
 
     .flex-container{
-        width: 100%;
-        display: flex;
-    }
-
-    .foto{
-        width: 50%;
-        margin: 0 auto;
-        display: flex;
+        margin: auto;
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        max-height: 100%;
+        gap : 1rem 1rem;
     }
 
-    .foto img{
-        width: 80%;
-        height: auto;
-        margin-bottom: 10px;   
+    .flex-container img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
         border: 2px solid #000;
         border-radius: 6%;
         box-shadow: 2px 2px 10px rgb(79, 79, 79);
-        transition: transform .2s;
     }
 
-    .foto img:hover{
-        transform: scale(1.2);
+    #image1{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    #image2{
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    #image3{
+        grid-column: 1 / 2;
+        grid-row: 3 / 5;
+    }
+    #image4{
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+    }
+    #image5{
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+    #image6{
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+    }
+    #BtnImg{
+        margin: auto;
+        width: auto;
+        margin-top: 10px;
     }
 
 /* Iframe Maps */
@@ -200,8 +255,6 @@ body{
         align-items: center;
         text-align: center;
       }
-
-
 
 /* Form Attendance */
     .formm{
@@ -283,46 +336,46 @@ body{
 
     #attendance-list {
 		max-width: 100%;
-        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        gap : .5rem .5rem;
         box-sizing: border-box;
-        display: flex;
         margin-top: 1rem;
         flex-direction: row;
 		flex-wrap: wrap;
-        /* justify-content: space-around; */
     }
 
     .list-attend{
 		display: flex;
+        min-width: 100%;
 		flex-direction: column;
 		box-sizing: border-box;
-		padding: 10px;
+		padding: .5rem;
 		background-color :rgba(255,220,218,1);
 		border-radius: 10px;
-        height: auto;
-        /* overflow: scroll; */
 	}
 
-    
     .list-attend p{
         margin: 2px 0;
         text-align: center;
         font-weight: 600;
         font-style: italic;
-        border-bottom-style: solid;
         border-color: grey;
     }
 
+    .list-attend p:nth-child(2){
+        border-bottom-style: solid;
+    }
+
 	.name-attend{
-		font-weight: 900;
+		font-weight: 800;
         border-bottom-style: solid;
         border-color: grey;
 	}
 	
 	.wishes-attend{
         font-style: italic;
-        overflow-wrap: break-word;
-        /* word-wrap: break-word; */
 	}
 
 /* Footer */
@@ -345,3 +398,127 @@ body{
         margin-bottom: .5rem;
     }
 
+
+
+    /* modal */
+    .modal-img-collection {
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+    }
+    
+    /* Modal Content */
+    .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        background-color: rgb(255, 225, 225);
+        margin: auto;
+        padding: auto;
+        border: 1px solid #888;
+        width: 90%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        animation-name: animatetop;
+        animation-duration: 0.6s
+    }
+    
+    /* Add Animation */
+    @keyframes animatetop {
+        from {top:-50%; opacity:0}
+        to {top:50%; opacity:1}
+    }
+    
+    /* The Close Button */
+    .close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    .modal-header {
+        padding: 2px 16px;
+        background-color: rgba(241,195,195);
+        color: white;
+        text-align: center;
+        color: black;
+    }
+    
+    .modal-body {
+        padding: 2px 16px;
+    }
+    
+    .modal-footer {
+        padding: 2px 16px;
+        background-color: rgba(241,195,195);
+        color: white;
+    }
+
+    /* corousel */
+    .carousel {
+        width: 80%;
+        max-height: 90vh;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .carousel-slides {
+        display: flex;
+        animation: carousel-animation 15s infinite;
+    }
+    
+    .slide {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+    
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    @keyframes carousel-animation {
+        0%, 100% {
+            transform: translateX(0);
+        }
+        20% {
+            transform: translateX(0);
+        }
+        25% {
+            transform: translateX(-100%);
+        }
+        45% {
+            transform: translateX(-100%);
+        }
+        50% {
+            transform: translateX(-200%);
+        }
+        70% {
+            transform: translateX(-200%);
+        }
+        75% {
+            transform: translateX(-300%);
+        }
+        95% {
+            transform: translateX(-300%);
+        }
+    }
+    
+    

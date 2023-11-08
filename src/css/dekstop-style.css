@@ -29,7 +29,9 @@ aside{
 }
 
 /* bg img size */
-
+.content{
+    background-size: 15vw;
+}
 
 .bride{
     background-size: 17vw;

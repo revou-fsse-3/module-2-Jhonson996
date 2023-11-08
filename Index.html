@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Wedding Invitation">
         <link rel="stylesheet" href="./src/css/styles.css">
-        
         <title>Wedding Invitation</title>
     </head>
 
@@ -23,12 +22,14 @@
                     <li><a href="#image">Image</a></li>
                     <li><a href="#Location">Location</a></li>
                 </ul>
+                <button onclick="myFunction()">Toggle dark mode</button>
+
             </nav>
         </header>
 
-        <audio controls loop autoplay>
+        <!-- <audio controls loop autoplay>
             <source src="./assets/music/audio.mpeg" type="audio/mpeg">
-        </audio>
+        </audio> -->
 
         <aside class="imgleft">
             <picture>
@@ -63,17 +64,16 @@
                 <div class="collection">
                     <p class="sub-title">Collection</p>
                     <div id="image" class="flex-container">
-                        <div class="foto">
-                            <img src="assets/Image/image-01.avif" alt="gambar prewed">
-                            <img src="assets/Image/image-02.avif" alt="gambar prewed">
-                            <img src="assets/Image/image-03.avif" alt="gambar prewed">
-                        </div>
-                        <div class="foto">
-                            <img src="assets/Image/image-04.avif" alt="gambar prewed">
-                            <img src="assets/Image/image-05.avif" alt="gambar prewed">
-                            <img src="assets/Image/image-06.avif" alt="gambar prewed">
-                        </div>
+                            <img src="assets/Image/image-01.avif" alt="gambar prewed1" id="image1">
+                            <img src="assets/Image/image-02.avif" alt="gambar prewed2" id="image2">
+                            <img src="assets/Image/image-03.avif" alt="gambar prewed3" id="image3">
+                            <img src="assets/Image/image-04.avif" alt="gambar prewed4" id="image4">
+                            <img src="assets/Image/image-05.avif" alt="gambar prewed5" id="image5">
+                            <img src="assets/Image/image-06.avif" alt="gambar prewed6" id="image6">
                     </div>
+
+                    <button id="BtnImg">More Images..</button>
+
                 </div>
 
                 <div id="Location" class="maps">
@@ -140,6 +140,39 @@
                 <p>Lord Capulet & Lady Capulet</p>
             </section>
         </footer>
+
+
+        <!-- Modal -->
+        <div id="modalImg" class="modal-img-collection">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Ed Sheer & Keith</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="carousel">
+                        <div class="carousel-slides">
+                            <div class="slide">
+                                <img src="./assets/Image/image/001.avif" alt="Image 1">
+                            </div>
+                            <div class="slide">
+                                <img src="./assets/Image/image/002.avif" alt="Image 2">
+                            </div>
+                            <div class="slide">
+                                <img src="./assets/Image/image/003.avif" alt="Image 3">
+                            </div>
+                            <div class="slide">
+                                <img src="./assets/Image/image/004.avif" alt="Image 4">
+                            </div>
+                            <div class="slide">
+                                <img src="./assets/Image/image/005.avif" alt="Image 5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src="./src/js/js.js"></script>
     </body> 
