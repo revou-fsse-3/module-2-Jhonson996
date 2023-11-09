@@ -1,12 +1,10 @@
 
-@import url(nav-style.css);
-@import url(dekstop-style.css) only screen and (min-width: 961px);
-@import url(mobile-style.css) only screen and (max-width: 960px);
+@import url(media-style.css);
 
 @font-face {
     font-family: 'Font-montserrat';
     src: 
-        url(../../assets/font/Montserrat-VariableFont_wght.ttf),
+        url(../../assets/font/Montserrat.woff2) format(woff2),
         url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXo.woff2) format('woff2');
         font-display: swap;
   }
@@ -14,7 +12,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Font-montserrat', sans-serif;
+    font-family: 'Font-montserrat';
     font-weight: 400;
     scroll-behavior: smooth;
 }
@@ -50,6 +48,19 @@
 
 .dark-mode button{
     background-color: rgba(255, 255, 255, 1);
+}
+
+/* darkMode Modal collection */
+.dark-mode .modal-header{
+    background-color: rgba(255, 255, 255, .7);
+}
+.dark-mode .modal-content{
+    background-color: rgba(0, 0, 0, .8);
+    filter: brightness(90%);
+}
+
+.dark-mode .modal-header, .dark-mode .close {
+    color: black;
 }
 
 audio{

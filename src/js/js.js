@@ -107,21 +107,24 @@ window.onclick = function(event) {
 }
 
 // Fungsi u/darkMode
-function toggleDarkMode() {
-    const bodyElement = document.body;
-    if (bodyElement.classList.contains('dark-mode')) {
-        bodyElement.classList.remove('dark-mode');
-        sessionStorage.setItem('darkMode', 'disabled');
-    } else {
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const bodyElement = document.body;
+
+darkModeToggle.addEventListener('change', function() {
+    if (darkModeToggle.checked) {
         bodyElement.classList.add('dark-mode');
         sessionStorage.setItem('darkMode', 'enabled');
+    } else {
+        bodyElement.classList.remove('dark-mode');
+        sessionStorage.setItem('darkMode', 'disabled');
     }
-}
+});
 
-// cek Status darkMode apa?
+// check DarkMode aktif?
 window.onload = function () {
     const darkModeStatus = sessionStorage.getItem('darkMode');
     if (darkModeStatus === 'enabled') {
-        document.body.classList.add('dark-mode');
+        darkModeToggle.checked = true;
+        bodyElement.classList.add('dark-mode');
     }
 }
