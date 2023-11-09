@@ -106,8 +106,22 @@ window.onclick = function(event) {
   }
 }
 
+// Fungsi u/darkMode
+function toggleDarkMode() {
+    const bodyElement = document.body;
+    if (bodyElement.classList.contains('dark-mode')) {
+        bodyElement.classList.remove('dark-mode');
+        sessionStorage.setItem('darkMode', 'disabled');
+    } else {
+        bodyElement.classList.add('dark-mode');
+        sessionStorage.setItem('darkMode', 'enabled');
+    }
+}
 
-function myFunction() {
-	var element = document.body;
-	element.classList.toggle("dark-mode");
+// cek Status darkMode apa?
+window.onload = function () {
+    const darkModeStatus = sessionStorage.getItem('darkMode');
+    if (darkModeStatus === 'enabled') {
+        document.body.classList.add('dark-mode');
+    }
 }

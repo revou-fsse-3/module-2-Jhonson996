@@ -6,9 +6,9 @@
 @font-face {
     font-family: 'Font-montserrat';
     src: 
-    url(../../assets/font/Montserrat-VariableFont_wght.ttf),
-    url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXo.woff2) format('woff2');
-    font-display: swap;
+        url(../../assets/font/Montserrat-VariableFont_wght.ttf),
+        url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXo.woff2) format('woff2');
+        font-display: swap;
   }
 
 * {
@@ -19,8 +19,8 @@
     scroll-behavior: smooth;
 }
 
+/* darkMode */
 .dark-mode{
-    background-image: none;
     background-image: linear-gradient(to bottom,
     rgba(0,0,0, .8), 
     rgba(0,0,0, .5), 
@@ -31,10 +31,6 @@
     rgba(0,0,0, 1)
     );
 }
-
-/* .dark-mode .bride{
-    background-color: rgba(0, 0, 0, .2);
-} */
 
 .dark-mode header{
     background-color: rgba(0, 0, 0, .5);
