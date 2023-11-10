@@ -63,6 +63,21 @@
     color: black;
 }
 
+/* darkMode attendance */
+.dark-mode .list-attend{
+    background-color :rgba(0,0,0,.5);
+    
+}
+
+/* .list-attend p{
+    margin: 2px 0;
+    text-align: center;
+    font-weight: 600;
+    font-style: italic;
+    border-color: grey;
+} */
+
+
 audio{
     display: none;
 }
