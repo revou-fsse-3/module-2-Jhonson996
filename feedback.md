@@ -6,3 +6,5 @@ https://developers.google.com/maps/documentation/cloud-customization/overview?hl
 https://stackoverflow.com/questions/42457368/google-maps-night-mode-embed-iframe
 
 3. Di dalem documentationnya, blom kamu mention gimana cara auto deployment ke githubnya
+
+4. Di website yang di deploy, ga ke play musicnya
